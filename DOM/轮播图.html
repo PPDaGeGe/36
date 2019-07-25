@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        #D {
+            width: 750px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        #imgB a {
+            display: none;
+        }
+
+        #imgB .ac {
+            display: block;
+        }
+
+        #bN {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        #bN li,
+        #bA li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        #bN .sc {
+            background: #ff0036;
+        }
+
+        #bA {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="D">
+        <div id="imgB">
+            <a href="www" class="ac"><img src="img/1.jpg" alt=""></a>
+            <a href="www"><img src="img/2.jpg" alt=""></a>
+            <a href="www"><img src="img/3.jpg" alt=""></a>
+            <a href="www"><img src="img/4.jpg" alt=""></a>
+            <a href="www"><img src="img/5.jpg" alt=""></a>
+        </div>
+        <ul id="bN">
+            <li class="sc">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <ul id="bA">
+            <li id="pr">&lt;</li>
+            <li id="nx">&gt;</li>
+        </ul>
+    </div>
+
+    <script>
+        var obN = document.getElementById('bN');
+        var aLi = obN.getElementsByTagName('li');
+        var oig = document.getElementById('imgB');
+        var aa = oig.getElementsByTagName('a');
+        var opr = document.getElementById('pr');
+        var onx = document.getElementById('nx');
+        var iN =0 ;
+
+        for (i = 0; i < aLi.length; i++) {
+
+            aLi[i].s = i;
+            aLi[i].onclick = function () {
+                for (j = 0; j < aLi.length; j++) {
+                    aLi[j].className = '';
+                    aa[j].className = '';
+                }
+                this.className = 'sc';
+                aa[this.s].className = 'ac';
+            }
+            onx.onclick = function(){
+                iN ++;
+                for(i=0;i<aLi.length;i++){
+                    aLi[i].className ='';
+                }
+                aLi[iN].className='sc';
+            }
+            // onx.onclick =function(){
+
+            // }
+
+        }
+    </script>
+</body>
+
+</html>
