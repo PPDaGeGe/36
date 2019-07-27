@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 构造函数 类   this 指向实例化对象
+        function Person(name, age, sex) {
+            this.name = name;
+            this.age = age;
+            this.sex = sex;
+
+            this.eat = function(){
+                console.log("eat eat eat you are pig");
+            }
+        }
+        var p1 = new Person('wp', 14, 'male');
+        console.log(p1);
+        p1.eat();
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
