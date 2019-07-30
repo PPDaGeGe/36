@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    div {
+        position: absolute;
+        width: 8em;
+        height: 8em;
+        border-width: 1em;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    div:nth-child(1) {
+        left: 10em;
+        top: 3em;
+        border-color: blue;
+    }
+
+    div:nth-child(2) {
+        left: 21em;
+        top: 3em;
+        border-color: black;
+    }
+
+    div:nth-child(3) {
+        left: 32em;
+        top: 3em;
+        border-color: red;
+    }
+
+    div:nth-child(4) {
+        left: 15.5em;
+        top: 8.5em;
+        border-color: yellow;
+    }
+
+    div:nth-child(5) {
+        left: 26.5em;
+        top: 8.5em;
+        border-color: green;
+    }
+
+    div:nth-child(4):before,
+    div:nth-child(4):after,
+    div:nth-child(5):before,
+    div:nth-child(5):after {
+        position: absolute;
+        top: -6.5em;
+        content: "";
+        width: 100%;
+        height: 100%;
+        border: 1em solid transparent;
+        border-radius: 50%;
+    }
+
+    div:nth-child(4):before {
+        left: -6.5em;
+        border-right-color: blue;
+    }
+
+    div:nth-child(4):after {
+        left: 4.5em;
+        border-bottom-color: black;
+    }
+
+    div:nth-child(5):before {
+        left: -6.5em;
+        border-right-color: black;
+    }
+
+    div:nth-child(5):after {
+        left: 4.5em;
+        border-bottom-color: red;
+    }
+</style>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+</body>
+
+</html>
