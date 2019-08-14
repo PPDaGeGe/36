@@ -9,19 +9,38 @@
 <body>
     <div id="app">
         <ul>
-            <li></li>
+            <li v-for="obj in loserList">{{obj.name}}|{{obj.age}}</li>
         </ul>
+        <button v-on:click="msg='gun'">click</button>
+        <span v-text='msg'></span>
+        <span v-html='msg'></span>
+ 
     </div>
     <script src="vue.js"></script>
     <script>
         let vm = new Vue({
             el:'#app',
             data:{
+                msg:'no fk can say!',
+                num: 22,
                 loserList:[
                     {
                         name:'hbq',
+                        age:20,
+                        big:18
+                    },
+                    {
+                        name:'mz',
+                        age:21,
+                        big:30
                     }
-                ]
+                ],
+                methods:{
+                    change(value){
+                        this.msg= value;
+                        console.log(e.target);
+                    }
+                }
             }
         })
     </script>
